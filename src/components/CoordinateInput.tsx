@@ -5,15 +5,17 @@ interface CoordinateInputProps {
   label: string;
   defaultValue?: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
+  lg?: number;
+  xxl?: number;
 }
 
-function CoordinateInput({label, defaultValue, onChange}: CoordinateInputProps) {
+function CoordinateInput({label, defaultValue, onChange, lg, xxl}: CoordinateInputProps) {
   return (
     <Form.Group as={Row} className="mb-3" controlId={label.toLowerCase()}>
-      <Form.Label column lg={2} sm={4}>
+      <Form.Label column xxl={xxl} lg={lg} sm={4}>
         {label}
       </Form.Label>
-      <Col lg={10} sm={8}>
+      <Col>
         <Form.Control {...{
           type: "text", 
           placeholder: label,
