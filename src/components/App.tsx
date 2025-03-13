@@ -4,6 +4,7 @@ import { AppContextProvider } from "./AppContext";
 import { Container } from "react-bootstrap";
 import Results from "./Results";
 import Input from "./Input";
+import Resources from "./Resources";
 
 
 function App() {
@@ -19,7 +20,11 @@ function App() {
         <h2 className="mb-4">Sample Coordinates</h2>
         <Input />
         <h2 className="my-4">Results</h2>
-        <Results />
+        <div style={{minHeight: '400px'}}>
+          <Results />
+        </div>
+        <h2 className="mb-4">Additional Resources</h2>
+        <Resources />
       </Container>
     </AppContextProvider>
   );
